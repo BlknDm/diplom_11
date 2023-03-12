@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "diplom-11"
+version = "0.1.0"
+description = ""
+authors = ["BlknDm <89090018300@mail.ru>"]
+readme = "README.md"
+packages = [{include = "diplom_11"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+envparse = "^0.2.0"
+psycopg2-binary = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
