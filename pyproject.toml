@@ -10,6 +10,8 @@ packages = [{include = "diplom_11"}]
 python = "^3.10"
 envparse = "^0.2.0"
 psycopg2-binary = "^2.9.5"
+gunicorn = "^20.1.0"
+django = "^4.1.7"
 
 
 [build-system]
