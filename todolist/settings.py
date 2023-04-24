@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     #созданные приложения
     'todolist.core',
     'todolist.goals',
-
+    'todolist.bot',
 ]
 
 if DEBUG:
@@ -154,3 +154,5 @@ SOCIAL_AUTH_USER_MODEL = 'core.User'
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
 }
+
+BOT_TOKEN = env.str('BOT_TOKEN')
