@@ -19,18 +19,24 @@ services:
   api:
     image: blkndm/diplom_11:latest
     env_file: .env
-    environment:
-      POSTGRES_HOST: db
     depends_on:
       db:
         condition: service_healthy
+
+  bot:
+    image: blkndm/diplom_11:latest
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    command: python3 manage.py runbot
 
   collect_static:
     image: blkndm/diplom_11:latest
     env_file: .env
     entrypoint: ''
     volumes:
-      - django_static:/opt/static
+      - django_static:/opt/static/
     command: python3 manage.py collectstatic -c --no-input
 
   frontend:
