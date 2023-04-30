@@ -40,14 +40,14 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    command: python manage.py runbot
+    command: python3 manage.py runbot
 
   collect_static:
     build: .
     env_file: .env
     entrypoint: ''
     volumes:
-      - django_static:/opt/static
+      - django_static:/opt/static/
     command: python3 manage.py collectstatic -c --no-input
 
   frontend:
