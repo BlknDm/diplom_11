@@ -50,7 +50,7 @@ jobs:
           script: |
             cd diplom_11
             docker-compose pull
-            docker compose up -d
+            docker-compose up -d
       - name: Clean old images
         uses: appleboy/ssh-action@master
         with:
